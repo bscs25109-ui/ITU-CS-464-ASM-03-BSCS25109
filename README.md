@@ -2,7 +2,7 @@
 
 - **Name:** Muhammad Abubakar
 - **Roll No:** BSCS25109
-- **Video (60–120 s):** [Insert your YouTube/Google Drive link here]
+- **Video (60–120 s):** (https://drive.google.com/file/d/14IqykeoI0V88DUhsSJnbFVPGgTTHt1Ud/view?usp=sharing)
 - **Started from:** Lecture 07 Unity build, used as the foundation.
 - **Controls:** W, A, S, D or Arrow Keys to move.
 - **To win a level:**
