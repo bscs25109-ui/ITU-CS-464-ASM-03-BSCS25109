@@ -1,37 +1,36 @@
-
 # CS464 Assignment 03 · Unity 3D Arena Game
 
 - **Name:** Muhammad Abubakar
 - **Roll No:** BSCS25109
-- **Video (60–120 s):** Add your video link
+- **Video (60–120 s):** [Insert your YouTube/Google Drive link here]
 - **Started from:** Lecture 07 Unity build, used as the foundation.
-- **Controls:** W, A, S, D or Arrow Keys.
+- **Controls:** W, A, S, D or Arrow Keys to move.
 - **To win a level:**
-  - Level 01: Collect 5 coins.
-  - Level 02: Complete the Lecture 07 gameplay objectives.
-  - Level 03: Collect 10 coins within 45 seconds.
-  - Level 04: Survive for 45 seconds.
-  - Level 05: Collect 5 coins to unlock the exit and reach it within 60 seconds.
+  - Level 01: Collect 5 coins (No hazards, safe environment).
+  - Level 02: Collect coins while avoiding Spikes (Health and i-frames added).
+  - Level 03: Collect coins while avoiding a Guard (Patrol, Chase, Return AI added).
+  - Level 04: Survive the Crusher hazard (Crusher warns before striking, adds massive knockback).
+  - Level 05: Collect coins, grab the Speed Power-up, and reach the Exit Zone before time runs out.
 
 ## Levels
 
 | Level | Screenshot | New idea | Combined with |
 |---|---|---|---|
-| Level01 | Add screenshot | Collect coins and manage health/lives | Player movement and hazards |
-| Level02 | Add screenshot | Lecture 07 base build | Enemies, coins, power-ups and UI |
-| Level03 | Add screenshot | Smart coin spawning using `Physics.CheckSphere` | Cross-walls, enemies and knockback |
-| Level04 | Add screenshot | Enemy patrol and chase AI | Survival timer and instant-death hazards |
-| Level05 | Add screenshot | Locked exit requiring 5 coins | Smart enemies, hazards and countdown timer |
+| Level01 | <img src="Docs/a3/level01.png" width="320"> | **Bounce Pad** (The Force) and Score | Coins, win panel, restart |
+| Level02 | <img src="Docs/a3/level02.png" width="320"> | **Spikes** and **Health (i-frames)** | Coins on risky paths |
+| Level03 | <img src="Docs/a3/level03.png" width="320"> | **Guard AI** (Patrol, Chase, Return) | Spikes, knockback |
+| Level04 | <img src="Docs/a3/level04.png" width="320"> | **Crusher Hazard** (Warns first) | Guard, Spikes |
+| Level05 | <img src="Docs/a3/level05.png" width="320"> | **Timed Speed Power-up** | Everything combined, locked exit |
 
 ## The Numbers
 
 | Number | Value | Why this value |
 |---|---|---|
-| Patrol speed | [Actual value] | Keeps enemy movement balanced with the player. |
-| Chase range | 6 units | Allows enemies to detect and chase nearby players. |
-| Knockback | [Force and ForceMode] | Throws the player far enough to make the game challenging. |
-| I-frames | [Actual value] | Gives the player time to recover after taking damage. |
-| Power-up duration | [Actual value] | Provides a temporary boost without making it permanent. |
+| Patrol speed | 10 m/s | Slower than the player's running speed, so the guard feels like it is patrolling and not aggressively hunting from across the map. |
+| Chase range | 6 m | Large enough to catch the player off guard, but small enough that they can still sneak past if they are careful. |
+| Knockback | 8f (Impulse) | Throws the player clear of the hazard instantly so they don't take double damage from staying inside the trigger. |
+| I-frames | 1.0 s | Gives the player exactly one second of invulnerability to escape the hazard before taking another hit. |
+| Power-up duration | 5.0 s | Long enough for the player to grab a risky coin or escape a guard, but short enough that it doesn't break the level. |
 
 ## Short Answers
 
